@@ -107,9 +107,10 @@ const rates = await paybear.getRates('GBP');
 ### Create a charge
 
 ```JavaScript
+const orderId = '123'
 const paymentResponse = await paybear.getPayment({
   crypto: "BTC",
-  callback: "http://www.abc.xyz/paid/123"
+  callback: `http://www.abc.xyz/confirmations/${orderId}`
 });
 ```
 
